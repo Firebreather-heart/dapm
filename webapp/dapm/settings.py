@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #3rd party
     'rest_framework',
     'drf_yasg',
+    'corsheaders',
     
     #inbuilt
     'api.apps.ApiConfig',
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -57,6 +59,13 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'dapm.urls'
+
+CORS_ALLOWED_ORIGINS = [
+    "*",
+]
+
+# Allow credentials (cookies, authentication headers)
+CORS_ALLOW_CREDENTIALS = True
 
 TEMPLATES = [
     {

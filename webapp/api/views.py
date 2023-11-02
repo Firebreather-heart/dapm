@@ -15,7 +15,7 @@ HEADERS = {
 @swagger_auto_schema(method='GET',
 operation_description='GET /all\n Returns all movies')
 @api_view(['GET'])
-def get_all_movies(request):
-    res = requests.get(url=URL, headers=HEADERS)
+def get_all_movies(request, page=1):
+    res = requests.get(url=URL+f'?page={page}', headers=HEADERS)
     res_json = res.json()
     return Response(res_json)
