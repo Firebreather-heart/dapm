@@ -18,13 +18,25 @@ const { setUser } = useContext(UserContext);
   }
 
 
+  useEffect(() =>{
+    fetch("https://fbc.pythonanywhere.com/api/all/1")
+    .then((response) => {
+    setError("");
+     console.log(response)}
+    )
+    .catch((err) =>
+    setError(err.message)
+    )
+ 
+ console.log("page rendered")
+   }, []);
 
   return (
     <div>
-        <nav className='flex justify-evenly p-2 items-center border-b-2 w-full'>
+        <nav className='flex flex-wrap justify-center gap-4 sm:justify-evenly p-2 items-center border-b-2 w-full'>
             <h1 className=' text-blue-400 font-bold'>Dapm</h1>
-            <div className="flex px-3 border items-center rounded-md ">
-                <input className='bg-transparent p-2 outline-none' placeholder='Enter a prompt' type="search" />
+            <div className="flex px-3 shrink border items-center rounded-md ">
+                <input className='bg-transparent shrink p-2 outline-none' placeholder='Enter a prompt' type="search" />
                 <button className='bg-blue-400 rounded h-[30px] text-base px-2'>Search</button>
             </div>
             <button onClick={Logout} className='bg-blue-400 rounded h-[30px] text-base px-2'>Logout</button>
