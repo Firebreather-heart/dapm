@@ -68,6 +68,7 @@ CORS_ALLOWED_ORIGINS = [
 
 # Allow credentials (cookies, authentication headers)
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 TEMPLATES = [
     {
