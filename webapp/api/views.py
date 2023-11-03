@@ -1,4 +1,5 @@
 from rest_framework.response import Response
+from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from drf_yasg.utils import swagger_auto_schema
 import requests
@@ -18,4 +19,5 @@ operation_description='GET /all\n Returns all movies')
 def get_all_movies(request, page=1):
     res = requests.get(url=URL+f'?page={page}', headers=HEADERS)
     res_json = res.json()
-    return Response(res_json)
+    return JsonResponse(res_json)
+    
