@@ -61,7 +61,9 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'dapm.urls'
 
 CORS_ALLOWED_ORIGINS = [
-    "*",
+    "http://localhost:5173",
+    "https://dapm.vercel.app/",
+    "http://superdev.firebcorps.tech",
 ]
 
 # Allow credentials (cookies, authentication headers)
