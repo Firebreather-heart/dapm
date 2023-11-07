@@ -12,7 +12,7 @@ HEADERS = {
 	"X-RapidAPI-Key": "fec099dd21mshcec4df7f75d81a3p1417ecjsn6aeee24e65bb",
 	"X-RapidAPI-Host": "moviesdatabase.p.rapidapi.com"
 }
-qs = {'startyear':2000}
+qs = {'startYear':2000}
 
 @swagger_auto_schema(method='GET',
 operation_description='GET /all\n Returns all movies')
