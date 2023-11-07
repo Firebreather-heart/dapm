@@ -6,7 +6,7 @@ import requests
 
 # Create your views here.
 
-URL = "https://moviesdatabase.p.rapidapi.com/titles/x/upcoming"
+URL = "https://moviesdatabase.p.rapidapi.com/titles"
 
 HEADERS = {
 	"X-RapidAPI-Key": "fec099dd21mshcec4df7f75d81a3p1417ecjsn6aeee24e65bb",
