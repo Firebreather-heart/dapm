@@ -22,3 +22,9 @@ def get_all_movies(request, page=1):
     res_json = res.json()
     return JsonResponse(res_json)
     
+def search(request,q):
+    querystring = {"exact":"false","titleType":"movie"}
+    url = f"https://moviesdatabase.p.rapidapi.com/titles/search/title/{q}"
+    res = requests.get(url=url,params=querystring, headers=HEADERS)
+    return JsonResponse(res.json())
+    
