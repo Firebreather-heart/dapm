@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.SkeletonCard{
+    background: rgb(228, 228, 228);
+    width:300px;
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+  }
+.spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    padding: 1.1px;
+    background: conic-gradient(#0000 10%,#adadad) content-box;
+    -webkit-mask: repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+         radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 calc(100% - 9px));
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+    animation: spinner-d55elj 1s infinite steps(10);
+  }
+  
+  @keyframes spinner-d55elj {
+    to {
+       transform: rotate(1turn);
+    }
+  }
